@@ -1,0 +1,163 @@
+@media (min-width: 100px) {
+	nav {
+		.burger {
+			display: block;
+			z-index: 222;
+			transform: translate 0.3s;
+			color: $white;
+			.burger.active {
+				color: $white;
+			}
+		}
+		.burger.active .line:first-child {
+			transform: translateY(-300px);
+		}
+		.burger.active .line:nth-child(2) {
+			transform: rotate(45deg) translate(1px, 7px);
+		}
+
+		.burger.active .line:nth-child(3) {
+			transform: rotate(-45deg) translate(0px, -8px);
+		}
+		.navigation-desktop {
+			position: absolute;
+			right: 0;
+			top: 0vh;
+			background-color: rgba(0, 0, 0, 0.4);
+			height: 100vh;
+			flex-direction: column;
+			text-align: center;
+			width: 100%;
+			transform: translate(100%);
+		}
+		.navigation-desktop.active {
+			color: $white;
+			background-color: rgba(0, 0, 0, 0.9);
+			display: flex;
+			align-items: center;
+			padding: 10em 0;
+			font-size: 2rem;
+
+			a:hover {
+				color: $green;
+			}
+		}
+		.active {
+			transform: translate(0);
+			color: $white;
+		}
+	}
+
+	@media (min-width: 576px) {
+		//header
+		.header {
+			&__logo {
+				left: 30%;
+				top: 20%;
+				.logo {
+					width: 250px;
+					height: 250px;
+				}
+			}
+
+			&__text {
+				position: relative;
+				display: flex;
+				padding: 1em;
+				top: 55%;
+				justify-content: center;
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		}
+		//o mnie
+		.aboutme {
+			h3 {
+				font-size: 2rem;
+			}
+			p {
+				font-size: 1.7rem;
+				font-weight: 300;
+			}
+			ul {
+				list-style: square;
+				font-size: 1.7rem;
+			}
+		}
+		//oferta
+		.offer {
+			.wrapper {
+				.container {
+					margin: 0 4em;
+
+					.boxes {
+						padding: 0 2em;
+
+						&__box {
+							display: flex;
+							width: 100%;
+							flex-direction: column;
+
+							.title {
+								padding: 2em 0;
+								font-size: 1.8rem;
+							}
+							.text {
+								padding: 0.5em 1em;
+								font-size: 1.7rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		//wizyta
+		.visit {
+			.wrapper {
+				.remember {
+					padding: 2em 1em;
+					font-size: 1.8rem;
+				}
+				.first-visit {
+					font-size: 1.8rem;
+					padding: 2em 0.5em;
+				}
+				h3 {
+					font-size: 2.4rem;
+					padding-bottom: 2em;
+				}
+				.container {
+					flex-wrap: nowrap;
+					.img {
+						display: flex;
+
+						align-items: center;
+						padding: 0 2em;
+						img {
+							border-radius: 25px;
+							display: flex;
+							max-width: 550px;
+							max-height: 50%;
+						}
+					}
+
+					p {
+						font-size: 1.8rem;
+						padding: 2em 1em;
+					}
+				}
+				ul {
+					li {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+		.contact {
+			align-items: center;
+			margin: 0 5em;
+			justify-items: center;
+		}
+	}
+}
