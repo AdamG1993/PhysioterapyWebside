@@ -161,16 +161,7 @@
 		}
 	}
 	.cookie-box {
-		position: fixed;
 		height: 220px;
 		width: 100%;
-		bottom: 0;
-		padding: 1em;
-		font-size: 2rem;
-		text-align: center;
-		background-color: $white;
-		opacity: 0;
-		transform: translateY(100%);
-		animation: show-cookies 0.5s 0.5s forwards;
 	}
 }
