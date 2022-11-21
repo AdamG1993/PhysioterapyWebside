@@ -20,18 +20,25 @@
 			transform: rotate(-45deg) translate(0px, -8px);
 		}
 		.navigation-desktop {
-			position: absolute;
+			position: fixed;
 			right: 0;
 			top: 0vh;
 			background-color: rgba(0, 0, 0, 0.4);
-			height: 100vh;
+			height: 100%;
 			flex-direction: column;
 			text-align: center;
 			width: 100%;
 			transform: translate(100%);
+			align-items: center;
+			justify-content: center;
+			a {
+				position: relative;
+				display: flex;
+			}
 		}
 		.navigation-desktop.active {
 			color: $white;
+			position: fixed;
 			background-color: rgba(0, 0, 0, 0.9);
 			display: flex;
 			align-items: center;
